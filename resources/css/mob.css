@@ -1,0 +1,376 @@
+/*----------------------------*/
+/*BASIC SETUP */
+/*---------------------------*/
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box; 
+}    
+
+html,
+body {
+color: #000; 
+ font-family: 'Lato', 'serif';
+font-weight: 300;
+font-size: 20px;
+text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.clearfix {zoom:1}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/*----------------------------*/
+/*MaIN NAV*/
+/*---------------------------*/
+
+
+.mainnav {
+    list-style: none;
+    margin-top: 70px;
+    margin-left: 100px;
+     position: relative;
+}
+.mainnav li {
+    display: block;
+    margin-left: 40px;
+    padding-bottom: 60px;
+}
+.mainnav li a:link,
+.mainnav li a:visited {
+    padding: 20px 50px;
+      border: 1px solid #e64022;
+color: #e64022;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+}
+.mainnav li a:hover,
+.mainnav li a:active {
+     border: 1px solid #e64022;
+color: #fff;
+}
+
+.submenu {
+    position: absolute;
+    margin-left: 180px;
+    opacity: 0;
+}
+.submenu li {
+    display: block;
+    margin-left: 40px;
+}
+.mainnav li:hover .submenu {
+    opacity: 1;
+}
+
+
+/*----------------------------*/
+/*HEADINGS */
+/*---------------------------*/
+
+h1, h2, h3 { 
+    font-weight: 15;
+    text-transform: uppercase;
+}
+h1 {
+     margin-top: 0em;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 240%;
+     word-spacing: 4px;
+    letter-spacing: 1px;
+}
+h2  {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin: 20px;
+    letter-spacing: 1px;
+}
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+h2:after {
+ display: block;
+    height: 2px;
+    background-color: #e64022;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+/*----------------------------*/
+/*HEADER */
+/*---------------------------*/
+
+
+header {
+background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/4k-wallpaper-4x4-automobile-1149056.jpg);
+    height: 100vh; 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/*----------------------------*/
+/*Cars dealer */
+/*---------------------------*/
+
+
+.boxes {
+    margin-left: 20px;
+    font-weight: 250;
+font-size: 16px;
+}
+.tight {
+    margin-top: 20px;
+    margin-bottom: -10px;
+    font-size: 18px;
+    border-bottom: 2px solid #e64022;
+}
+.rock {
+     margin-top: 20px;
+    margin-bottom: -10px;
+    font-size: 18px;
+    border: 2px solid #e64022;
+    width: 50%;
+    padding-left: 10px;
+    background-color: #e64022;
+}
+.rock:hover {
+    background-color: #fff;
+}
+.lots {
+    background-image: url(images/MOBILE%20HOUSE%20BRANDING.jpg);
+     height: 128vh; 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+/*----------------------------
+CONTACT FORM
+---------------------------*/
+.contactform {
+    width: 90%;
+    margin: 0 auto;
+}
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+textarea {
+    height: 100px;
+}
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+}
+*:focus{outline: none;}
+
+.map {
+    width: 100%;
+    height: 630px;
+        z-index: 0;
+    position: relative;
+}
+
+.mapbox {
+ width: 100%;
+    height: 630px;
+    position: relative;
+}
+.formbox {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 10;
+    height: 630px;
+    padding-top: 40px;
+    width: 50%;
+    
+}
+.formessage {
+    width: 70%;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #333;
+ 
+}
+.success {
+    background-color: rgba(38, 191, 68, 0.73);
+}
+.error {
+    background-color: rgba(209, 46, 46, 0.76); 
+}
+
+/*----------------------------
+SLIDESHOW
+---------------------------*/
+
+.slideshow.loading {
+				padding: 50px 0;
+				background: url(images/loader.gif) no-repeat center center; 
+				background-color: #eee;
+			}
+
+			.slideshow.loading > * {
+				display: none;
+			}
+
+			.slideshow {
+				position: relative; /* needed to vertically center align slide buttons */
+			}
+			.slideshow .wrapper {
+				width: 90%;
+				margin: 0 5%;
+			}
+			.slideshow .slide img {
+				width: 200px;
+			}
+
+			/***** slideshow buttons *****/
+			.slideshow .prev,
+			.slideshow .next {
+				text-decoration: underline;
+				cursor: pointer;
+				position: absolute;
+				z-index: 100;
+				padding: 0 3%;
+				top: calc(50% - 20px); /* next/prev buttons are 40px high by default */
+				top: 0;
+				width: 2.5%;
+				padding: 0;
+			}
+
+			.slideshow .prev {
+				left: 0;
+			}
+
+			.slideshow .next {
+				right: 0;
+			}
+
+			.slideshow .next.disabled,
+			.slideshow .prev.disabled {
+				cursor: default;
+				opacity: 0.3;
+			}
+
+			/***** slideshow tabs ******/
+			.slideshow .slideTabs {
+				text-align: center;
+			}
+
+			.slideshow .slideTabs a {
+				padding: 10px;
+				margin: 0 5px;
+				line-height: 2em;
+				background: url(images/dot_grey_small.png) no-repeat center center;
+				opacity: 1;
+			}
+
+			.slideshow .slideTabs a.selected {
+				background-image: url(images/dot_blue_small.png);
+			}
+
+/*----------------------------
+FOOTER
+---------------------------*/
+footer {
+    background-image: url(images/4k-wallpaper-4x4-automobile-.jpg);
+    padding: 50px;
+}
+.footernav {
+    list-style: none;
+    float: left;
+    font-size: 80%;
+}
+.socialinks {
+    list-style: none;
+    float: right;
+}
+.footernav li,
+.socialinks li {
+    display: inline-block;
+    margin-right: 20px;
+}
+.footernav li:last-child,
+.socialinks li:last-child {
+margin-right: 0;
+}
+
+.footernav li a:link,
+.footernav li a:visited,
+.socialinks li a:link,
+.socialinks li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: #e64022;
+    transition: color 0.2s;
+}
+.footernav li a:hover,
+.footernav li a:active {
+    color: #ddd;
+}
+
+.socialinks li a:link,
+.socialinks li a:visited {
+    font-size: 160%;
+}
+.ion-logo-facebook,
+.ion-logo-twitter,
+.ion-logo-googleplus,
+.ion-logo-instagram {
+    transition: color 0.2s;
+}
+
+.ion-logo-facebook:hover {
+    color: #3b5998;
+}
+.ion-logo-twitter:hover {
+    color: #00aced;
+}
+.ion-logo-googleplus:hover {
+    color: #dd4b39;
+}
+.ion-logo-instagram:hover {
+    color: #517fa4;
+}
+footer p {
+    color: #e64022;
+    text-align: center;
+    margin-top: 20px;
+}
+.sitedesigner {
+    font-size: 30%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
